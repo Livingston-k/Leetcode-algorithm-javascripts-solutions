@@ -11,7 +11,7 @@ You can return the answer in any order.
 **Example 1:**
 
 Input:nums = [2,7,11,15], target = 9
-**Output**: [0,1]
+Output: [0,1]
 Explanation:Because nums[0] + nums[1] == 9, we return [0, 1].
 
 **Example 2:**
@@ -26,6 +26,37 @@ Explanation:Because nums[0] + nums[1] == 9, we return [0, 1].
 
  SOLUTION FOR TWO SUM PROBLEM
 
-```
-/**@param{number[]}nums@param{number}target@return{number[]} */vartwoSum=function (nums, target) {    previous_values = {}    for (leti=0; i<=nums.length; i++) {    letcurrentNum=nums[i];    letneeded=target-currentNum    index2 = previous_values[needed]    if (index2 !=null) {    return [index2, i]    } else {    previous_values[currentNum] =i    }    }};
-```
+
+/**
+
+* @param{number[]}nums
+* @param{number}target
+* @return{number[]}
+
+ */
+
+vartwoSum=function (nums, target) {
+
+    previous_values = {}
+
+    for (leti=0; i<=nums.length; i++) {
+
+    letcurrentNum=nums[i];
+
+    letneeded=target-currentNum
+
+    index2 = previous_values[needed]
+
+    if (index2 !=null) {
+
+    return [index2, i]
+
+    } else {
+
+    previous_values[currentNum] =i
+
+    }
+
+    }
+
+};
