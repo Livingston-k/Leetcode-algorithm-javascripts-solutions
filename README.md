@@ -36,15 +36,27 @@ Explanation:Because nums[0] + nums[1] == 9, we return [0, 1].
  */
 
 vartwoSum=function (nums, target) {
+
     previous_values = {}
+
     for (leti=0; i<=nums.length; i++) {
+
     letcurrentNum=nums[i];
+
     letneeded=target-currentNum
+
     index2 = previous_values[needed]
+
     if (index2 !=null) {
+
     return [index2, i]
+
     } else {
+
     previous_values[currentNum] =i
+
     }
+
     }
+
 };
